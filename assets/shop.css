@@ -57,9 +57,8 @@ body {
 
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 18px;
-  align-items: stretch;      /* ردیف‌ها هم‌قد شوند */
 }
 
 .product-card {
@@ -280,16 +279,29 @@ body {
   }
 }
 
-@media (max-width: 720px) {
-  .layout {
-    grid-template-columns: minmax(0, 1fr);
+@media (max-width: 600px) {
+  .page {
+    padding: 16px 10px;
   }
 
-  .cart {
-    order: -1;
+  .products {
+    padding: 16px;
   }
 
-  .product-image img {
-    height: 10rem;   /* ارتفاع کمتر روی موبایل */
+  .product-card {
+    padding: 12px;
+  }
+
+  .product-title {
+    font-size: 0.95rem;
+  }
+
+  .product-desc {
+    font-size: 0.75rem;
+  }
+
+  .btn {
+    padding: 7px 12px;
+    font-size: 0.8rem;
   }
 }
